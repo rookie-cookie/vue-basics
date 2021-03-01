@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width", initial-scale=1.0>
+	<title>Learning Vue</title>
+</head>
+
+<body>
+
+	<h1>Hello Vue </h1>
+
+	<div id="app">
+		<!-- <h2>I am the template now</h2> -->
+
+		<div v-if="showBooks">  <!-- conditional -->
+			<p>{{ title }} - {{ author }} - {{ age }} </p>
+		</div>
+
+		<button @click="toggleShowBooks">
+			<span v-if="showBooks">Hide Books</span>   <!-- removes elements from the dom -->
+			<!-- <span v-if="!showBooks">Show Books</span> -->
+			<span v-else>Show Books</span>
+		</button>
+
+		<div v-show="showBooks">Currently showing books</div>  <!-- only hides the element using css -->
+
+		<!-- <button v-on:click="age++">Increase Age</button> -->
+		<!-- <button v-on:click="age--">Decrease Age</button> -->
+		<!-- <div @click="changeTitle('Oathbringer')">Change Book Title</div> -->
+
+	</div>
+
+
+
+	<script src="https://unpkg.com/vue@3.0.2"></script>
+	<script type="text/javascript" src="app.js"></script>
+
+</body>
+</html> 
